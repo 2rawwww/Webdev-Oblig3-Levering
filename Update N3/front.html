@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">  
+        <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>SunX</title>
+    </head>
+    <body>
+        <div id="grid-container">
+            <header class="topbottom">
+                <h1>SunX</h1>
+                <i id="ham" class="fas fa-bars fa-4x"></i>
+            </header>
+            <nav id="navmenu">
+                <a href="front.html">Home</a>
+                <a href="produktside.html">Product Page</a>
+                <a href="support.html">Support</a>
+                <button id="closeMenu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 1.5em;">&times;</button>
+            </nav>
+            <script>
+                document.getElementById('ham').addEventListener('click', function() {
+                    const menu = document.getElementById('navmenu');
+                    if (menu.style.display === 'none' || menu.style.display === '') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+                document.getElementById('closeMenu').addEventListener('click', function() {
+                    const menu = document.getElementById('navmenu');
+                    menu.style.display = 'none';
+                });
+            </script>
+            <main>
+                <section class="frontpage">
+                    <h1>Shred the roads with ANTI HERO</h1> 
+                    <h2>Autumn collection dropping the 25th!</h2>
+                    <div class="frontpage-img"></div>
+                </section>
+                    <input class="search-bar" type="text" name="q" placeholder="Search...">
+                <section class="button-container">
+                    <article class="round-button">
+                        <h3 class="boards">Boards</h3>
+                        <picture>
+                            <img src="img/erik-mclean-qcKAq5nUcOU-unsplash.jpg" alt="Bilde 1">
+                        </picture>   
+                    </article>
+                    <article class="round-button">
+                        <h3 class="shoes">Shoes</h3>
+                        <picture>
+                            <img src="img/skaterbuttonshoescropped.jpg" alt="Bilde 2">
+                        </picture>
+                    </article>
+                    <article class="round-button">
+                        <h3 class="clothes">Clothes</h3>
+                        <picture>
+                            <img src="img/skateboarding-6973365_1920.jpg" alt="Bilde 3">
+                        </picture>
+                    </article>
+                    <article class="round-button">
+                        <h3 class="collections">Collections</h3>
+                        <picture>
+                            <img src="img/skateboarding-2562281_1920.jpg" alt="Bilde 4">
+                        </picture>  
+                    </article>
+                </section>
+                <footer class="footer-support">
+                    <a href="#">Contact</a>
+                    <a href="support.html">Support</a>
+                    <a href="#">About</a>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>Productpage</title>
+    </head>
+    <body>
+        <div id="grid-container">
+            <header class="topbottom">
+                <h1>SunX</h1>
+                <i id="ham" class="fas fa-bars fa-4x"></i>
+            </header>
+            <nav id="navmenu">
+                <a href="front.html">Home</a>
+                <a href="produktside.html">Product Page</a>
+                <a href="support.html">Support</a>
+                <button id="closeMenu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 1.5em;">&times;</button>
+            </nav>
+            <script>
+                document.getElementById('ham').addEventListener('click', function() {
+                    const menu = document.getElementById('navmenu');
+                    if (menu.style.display === 'none' || menu.style.display === '') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+                document.getElementById('closeMenu').addEventListener('click', function() {
+                    const menu = document.getElementById('navmenu');
+                    menu.style.display = 'none';
+                });
+            </script>
+            <main>
+                <section class="frontpage-produktside">
+                    <input class="search-bar-produktside" type="text" name="q" placeholder="Search...">
+                    <img src="img/vans-8173909_1920.jpg" class="frontpage-produktside-img" alt="vans">
+                </section>
+                <article>
+                    <h1 class="frontpage-produktside-h1">Vans</h1>
+                    <h3 class="frontpage-produktside-h3">799,-</h3>
+                    <button class="handlekurv">Legg til i handlekurv    +</button>
+                </article>
+                <footer class="footer-support">
+                    <a href="#">Contact</a>
+                    <a href="support.html">Support</a>
+                    <a href="#">About</a>
+                </footer>
+            </main>
+         </div>
+    </body>
+</html>

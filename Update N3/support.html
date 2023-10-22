@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <title>SunX Support</title>
+    </head> 
+    <body>
+        <div id="grid-container">
+            <header class="topbottom">
+                <h1>SunX</h1>
+                <i id="ham" class="fas fa-bars fa-4x"></i>
+            </header>
+            <nav id="navmenu">
+                <a href="front.html">Home</a>
+                <a href="produktside.html">Product Page</a>
+                <a href="support.html">Support</a>
+                <button id="closeMenu" style="position: absolute; top: 10px; right: 10px; background: none; border: none; color: white; font-size: 1.5em;">&times;</button>
+            </nav>
+            <script>
+                document.getElementById('ham').addEventListener('click', function() {
+                    const menu = document.getElementById('navmenu');
+                    if (menu.style.display === 'none' || menu.style.display === '') {
+                        menu.style.display = 'block';
+                    } else {
+                        menu.style.display = 'none';
+                    }
+                });
+                document.getElementById('closeMenu').addEventListener('click', function() {
+                    const menu = document.getElementById('navmenu');
+                    menu.style.display = 'none';
+                });
+            </script>
+            <main>
+                <h1 class="support-frontpage">Support</h1>
+                <input class="search-bar" type="text" name="q" placeholder="Search...">
+                <section class="button-container">
+                    <article class="round-button">
+                        <h3 class="contact-support">Contact</h3>
+                        <picture>
+                            <img src="img/skateboarding-6310245_1920.jpg" alt="Bilde 1">
+                        </picture>   
+                    </article>
+                    <article class="round-button">
+                        <h3 class="support-support">Support</h3>
+                        <picture>
+                            <img src="img/tom-morbey-r1SwcagHVG0-unsplash.jpg" alt="Bilde 2">
+                        </picture>
+                    </article>
+                    <article class="round-button">
+                        <h3 class="delivery-support">Delivery</h3>
+                        <picture>
+                            <img src="img/gautier-salles-CPFV7QS3_Sg-unsplash.jpg" alt="Bilde 3">
+                        </picture>
+                    </article>
+                    <article class="round-button">
+                        <h3 class="aboutus-support">About us</h3>
+                        <picture>
+                            <img src="img/pixelperfektion-OS2WODdxy1A-unsplash.jpg" alt="Bilde 4">
+                        </picture>  
+                    </article>
+                </section>
+
+                <footer class="footer-support">
+                    <a href="#">Contact</a>
+                    <a href="support.html">Support</a>
+                    <a href="#">About</a>
+                </footer>
+            </main>
+        </div>
+    </body>
+</html>
